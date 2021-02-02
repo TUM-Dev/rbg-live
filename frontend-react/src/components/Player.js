@@ -31,7 +31,8 @@ function VideoSpeedHandler(props) {
     }
 
     return <div style={{float: "right"}}>
-      <select className="form-control" id="video-speed" defaultValue="x1" onChange={handleVideoSpeedChange} style={{width:100}}>
+      <select className="form-control" id="video-speed" onChange={handleVideoSpeedChange} style={{width:100}}>
+        <option selected hidden>Speed</option>
         <option>x0.25</option>
         <option>x0.5</option>
         <option>x0.75</option>

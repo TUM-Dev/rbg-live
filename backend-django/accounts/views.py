@@ -16,4 +16,6 @@ def home_view(request):
     return render(request, "components/home.html")
 
 def manage_view(request):
+    if not request.user.is_authenticated:
+        return redirect("/")
     return render(request, "components/manage/manage.html")
