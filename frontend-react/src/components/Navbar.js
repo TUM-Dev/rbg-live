@@ -22,6 +22,7 @@ function Navbar(props) {
     const [socket, setSocket] = useState(false)
 
     window.addEventListener('keydown', function(e) {
+      console.log(1)
       e.stopImmediatePropagation()
       if(e.which === 27) {
         setDisplaySearch(false)
@@ -151,7 +152,7 @@ function UpperNavbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
         <form style={{marginRight: 0}} className="form-inline my-2 my-lg-0">
-          <button onClick={() => setDisplaySearch(true)} className="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search Streams</button>
+          <button onClick={() => setDisplaySearch(true)} className="btn btn-outline-secondary my-2 my-sm-0" type="button">Search Streams</button>
           <div className="container"></div>
         </form>
           <li className="nav-item active">

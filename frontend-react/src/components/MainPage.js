@@ -6,13 +6,11 @@ import {lightTheme, darkTheme} from './styling/Themes'
 
 function MainPage(props) {
     const [theme, setTheme] = useState('light')
-    return <div>
-        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}><>
-            <GlobalStyles/>
-            <Navbar setTheme={setTheme} />
-            </>
-        </ThemeProvider>
-    </div>
+    return <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}><>
+        <GlobalStyles/>
+        <Navbar setTheme={setTheme} />
+        </>
+    </ThemeProvider>
 }
 
 export default MainPage

@@ -4,6 +4,75 @@
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
 
+
+ /* === DARK MODE SWITCH === */
+
+ .switch input {
+  position: absolute;
+  opacity: 0;
+}
+
+/**
+ * 1. Adjust this to size
+ */
+
+.switch {
+  display: inline-block;
+  font-size: 20px; /* 1 */
+  height: 1em;
+  width: 2em;
+  background: #BDB9A6;
+  border-radius: 1em;
+}
+
+.switch div {
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #FFF;
+  box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+          transition: all 300ms;
+}
+
+.switch input:checked + div {
+  -webkit-transform: translate3d(100%, 0, 0);
+     -moz-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0);
+}
+
+/* === SEARCH BAR === */
+.search-overlay {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(146, 150, 156, 0.75);
+}
+
+body {
+  /* background-color: #F5F5F5; */
+  /* color: #F87060; */
+  /* height: 100vh; */
+  margin: 0;
+  /*background-image: url(res/imaage.png);*/
+}
+
+.orange-search {
+  /*this is the search bar inside and I know */
+  /*the display is hidden but I have jQuery code that changes that*/
+  width: 21%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+ /* === CUSTOM === */
  #wrapper {
     overflow-x: hidden;
  }
@@ -21,6 +90,16 @@
    /* border-top:blue; */
    border-bottom: none;
    border-right: none;
+ }
+
+
+ .list-group-item a {
+   color: grey;
+ }
+ 
+ .list-group-item a:hover {
+   text-decoration: none;
+   color: blue;
  }
 
 #sidebar-wrapper {
@@ -98,10 +177,14 @@
 
 #frame {
   /* display: flex; */
+  padding-left: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   font-family: "proxima-nova", "Source Sans Pro", sans-serif;
   font-size: 1em;
   letter-spacing: 0.1px;
-  color: #32465a;
+  /* color: #32465a; */
+  color: red;
   text-rendering: optimizeLegibility;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   -webkit-font-smoothing: antialiased;
@@ -111,7 +194,10 @@
   height: 92vh;
   min-height: 300px;
   max-height: 800px;
-  background: #E6EAEA;
+  border: grey;
+  border-width: 0.5px;
+  /* border-left-style: solid; */
+  /* background: #E6EAEA; */
 }
 @media screen and (max-width: 360px) {
   #frame {
@@ -127,7 +213,7 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  margin-right: 20px;
+  margin-right: 200px;
 }
 
 #frame .content .messages {

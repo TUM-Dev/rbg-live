@@ -41,7 +41,7 @@ function Chatbox(props) {
 		socket.emit("SendMessage", {content: message, user: currentUser, stream: streamRef.current})
 	}
 	
-	window.addEventListener('keydown', function(e) {
+	window.addEventListener('keyup', function(e) {
 		e.stopImmediatePropagation()
 		if(e.which === 13) {
 			newMessage()
@@ -68,13 +68,13 @@ function Chatbox(props) {
 				{sortMessages}
 			</ul>
 		</div>
-		<div className="message-input">
+		{currentUser !== null && <div className="message-input">
 			<div className="wrap">
 			<input type="text" placeholder="Write your message..." style={{borderRadius: 5}} />
 			<i className="fa fa-paperclip attachment" aria-hidden="true"></i>
 			<button onClick={newMessage} className="submit"><i className="fa fa-paper-plane" aria-hidden="true"></i></button>
 			</div>
-		</div>
+		</div>}
 	</div>
 </div>
 <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
