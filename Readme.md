@@ -1,5 +1,5 @@
 # RGB-live
-This project was created to redesign the Livestream and VoD website of the [RBG-Multimedia](https://www.in.tum.de/rbg) group ([live.rbg.tum.de](https://live.rbg.tum.de/)).
+This project was created to redesign the Livestream and VoD website of the [RBG-Multimedia](https://www.in.tum.de/rbg) group.
 This project will be available at [live.rbg.tum.de](https://live.rbg.tum.de).  
 Major Features include a modern UI with dark-mode Support and a Live-Chat.
 
@@ -8,7 +8,7 @@ If you want to contribute, please create a pull request and just wait for it to 
 
 ## Getting started with development
 The following guide is optiomised for Linux.
-On Windows installing some things is more tedious and requires the respective installers.
+On native-Windows installing some things is more tedious and requires the respective installers.
 We recommend you use [WSL2](https://docs.microsoft.com/de-de/windows/wsl/install-win10) for this reason.
 
 Clone the Project using
@@ -21,7 +21,7 @@ Install system dependencies
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y python3-pip python3.7-venv npm
+sudo apt-get install -y python3-pip python3-venv npm
 ```
 
 Install python-dependencies in an virtual environment
@@ -42,12 +42,6 @@ all nessesary files can be build and installed using
 
 ###Backend
 
-Create the SQLite-database by running the following command
-
-```bash
-python3 backend-django/manage.py migrate
-```
-
 Create a file in `backend-django/rbg_live/` named `.env`
 in this File add
 ```dotenv
@@ -56,7 +50,13 @@ SECRET_KEY="SECRET"
 ```
 This File represents your environment-options present when launching the backend server.
 
-Start the local backend webserver
+Create the SQLite-database by running the following command
+
+```bash
+python3 backend-django/manage.py migrate
+```
+
+Start the local webserver
 
 ```bash
 python3 backend-django/manage.py runserver
