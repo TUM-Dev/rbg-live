@@ -48,6 +48,14 @@ Create the SQLite-database by running the following command
 python3 backend-django/manage.py migrate
 ```
 
+Create a file in `backend-django/rbg_live/` named `.env`
+in this File add
+```dotenv
+DEBUG=True
+SECRET_KEY="SECRET"
+```
+This File represents your environment-options present when launching the backend server.
+
 Start the local backend webserver
 
 ```bash
