@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 
 def transferReactBuildToDjango(source, target, firstDelimiter, firstIndexShift, secondDelimiter, secondIndexShift):
     with open(source, 'r') as f:
