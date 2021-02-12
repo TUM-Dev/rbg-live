@@ -17,14 +17,14 @@ git clone https://github.com/TUM-Dev/rbg-live.git
 cd rbg-live
 ```
 
-Install system dependencies
+Install system dependencies (on a Debian-like system)
 
 ```bash
 sudo apt-get update
 sudo apt-get install -y python3-pip python3-venv npm
 ```
 
-Install python-dependencies in an virtual environment
+Install Python dependencies in an virtual environment
 
 ```bash
 python3 -m venv venv
@@ -33,14 +33,14 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
-###Frontend
+### Frontend
 
-all nessesary files can be build and installed using
+All nessesary files can be build and installed using
 ```bash
 ./build.sh
 ```
 
-###Backend
+### Backend
 
 Create a file in `backend-django/rbg_live/` named `.env`
 in this File add
@@ -48,7 +48,8 @@ in this File add
 DEBUG=True
 SECRET_KEY="SECRET"
 ```
-This File represents your environment-options present when launching the backend server.
+
+This file represents your environment-options present when launching the backend server.
 
 Create the SQLite-database by running the following command
 
